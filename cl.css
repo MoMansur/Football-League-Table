@@ -48,9 +48,15 @@ div {
 
 
 h1 {
-    color: rgb(0, 0, 134);
-    font-weight: 700;
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+    max-width: auto;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
     text-align: center;
+    background-color: rgb(0, 0, 134);
     
 }
 H2{
@@ -80,6 +86,24 @@ h3{
     background-color: rgba(15, 15, 38, 0.515);
     border-radius: 10px;
 }
+
+
+#boxA,#boxB,
+#boxC,#boxD{
+    max-width: 900px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 #semi1, #semi11,
 #semi2, #semi22{
