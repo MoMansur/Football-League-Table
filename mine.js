@@ -96,8 +96,8 @@ function groupA(team1, team2, team3, team4){
  
 
 
-const firstaElement = document.getElementById('first' && 'ptsA1');
-    firstaElement.innerHTML = firstA()&& '-- '+point() + 'pts';
+const firstaElement = document.getElementById('first');
+    firstaElement.innerHTML = firstA();
 
     const firstbElement = document.getElementById('second');
     firstbElement.innerHTML = secondA();
