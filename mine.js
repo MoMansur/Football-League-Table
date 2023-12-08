@@ -9,15 +9,6 @@ var D = Math.floor(Math.random() * 10)
 
 
 
-
-
-
-
-const firstbElement = document.getElementById('firstB');
-    firstbElement.innerHTML = groupA('ss', 'sssdd', 'dddd', 'dddd City');
-
-
-
 groupA('Liverpool', 'Barcelona', 'Arsenal', 'Man City');
 groupB('Psg', 'Sevilla', 'Man Utd', 'Fulham')
 groupC('Ajax','Napoli','Bayern Munich','Lyon',)
@@ -28,439 +19,327 @@ function groupA(team1, team2, team3, team4){
 
  console.log('GROUP A: TABLE')
 
+
+let firstA = () => {
 if(A >= B && A >= C && A >= D){
-    console.log (`1. ${team1} - ${A}pts`);
-
-    const firstElement = document.getElementById('first');
-    firstElement.innerHTML = `1. ${team1} - ${A}pts`;
- 
+    return `1. ${team1} - ${A}pts`;
 }else if(B >= A && B >= C && B >= D){
-    const firstElement = document.getElementById('first');
-    firstElement.innerHTML = `1. ${team2} - ${B}pts`;
-    console.log (`1. ${team2} - ${B}pts`);
-
+     return `1. ${team2} - ${B}pts`
 }else if(C >= B && C >= A && C >= D){
-    const firstElement = document.getElementById('first');
-    firstElement.innerHTML = `1. ${team3} - ${C}pts`;
-    console.log (`1. ${team3} - ${C}pts`);
-
+    return `1. ${team3} - ${C}pts` 
 }else if(D >= B && D >= C && D >= A){
-    console.log (`1. ${team4} - ${D}pts`);
-    const firstElement = document.getElementById('first');
-    firstElement.innerHTML = `1. ${team4} - ${D}pts`;
+    return`1. ${team4} - ${D}pts`
+}
+
 }
 
 
-
-
 //SECOND PLACE
 //SECOND PLACE
+
+let secondA = () => {
 if(A>=B && A>=C && A<=D || A>=C && A>=D && A<=B || A>=B && A>=D && A<=C){
-    const firstElement = document.getElementById('second');
-    firstElement.innerHTML = `2. ${team1} - ${A}pts`;
-    console.log (`2. ${team1} - ${A}pts`);
-
+    return `2. ${team1} - ${A}pts`
 }else if(B>=A && B>=C && B<=D || B>=C && B>=D && B<=A || B>=A && B>=D && B<=C){
-    const firstElement = document.getElementById('second');
-    firstElement.innerHTML = `2. ${team2} - ${B}pts`;
-    console.log (`2. ${team2} - ${B}pts`);
-
+    return`2. ${team2} - ${B}pts`;
 }else if(C>=B && C>=A && C<=D || C>=A && C>=D && C<=B || C>=B && C>=D && C<=A){
-    const firstElement = document.getElementById('second');
-    firstElement.innerHTML = `2. ${team3} - ${C}pts`;
-    console.log (`2. ${team3} - ${C}pts`);
-
+   return `2. ${team3} - ${C}pts`;
 }else if(D>=B && D>=C && D<=A || D>=C && D>=A && D<=B || D>=B && D>=A && D<=C){
-    const firstElement = document.getElementById('second');
-    firstElement.innerHTML = `2. ${team4} - ${D}pts`;
-    console.log (`2. ${team4} - ${D}pts`);
+   return `2. ${team4} - ${D}pts`
+}
 }
 
 
 
-
-//THIRD PLACE 
 //THIRD PLACE
-
+let thridA = () => {
 if(A<=B && A<=C && A>=D || A<=C && A<=D && A>=B || A<=B && A<=D && A>=C){
-    const firstElement = document.getElementById('third');
-    firstElement.innerHTML = `3.${team1} - ${A}pts`;
-    console.log (`3. ${team1} - ${A}pts`);
-
+   return `3. ${team1} - ${A}pts`;
 }else if(B<=A && B<=C && B>=D || B<=C && B<=D && B>=A || B<=A && B<=D && B>=C){
-    const firstElement = document.getElementById('third');
-    firstElement.innerHTML = `3.${team2} - ${B}pts`;
-    console.log (`3. ${team2} - ${B}pts`);
-
+    return `3. ${team2} - ${B}pts`;
 }else if(C<=B && C<=A && C>=D || C<=A && C<=D && C>=B || C<=B && C<=D && C>=A){
-    const firstElement = document.getElementById('third');
-    firstElement.innerHTML = `3.${team3} - ${C}pts`;
-    console.log (`3. ${team3} - ${C}pts`);
-
+    return `3. ${team3} - ${C}pts`;
 }else if(D<=B && D<=C && D>=A || D<=C && D<=A && D>=B || D<=B && D<=A && D>=C){
-    const firstElement = document.getElementById('third');
-    firstElement.innerHTML = `3.${team3} - ${D}pts`;
-    console.log (`3. ${team4} - ${D}pts`);
+    return `3. ${team4} - ${D}pts`;
 }
+}
+
 
 
 //LAST PLACE
-
+let fourthA = () => {
 if(A <= B && A <= C && A <= D){
-    console.log (`4. ${team1} - ${A}pts`);
-    const firstElement = document.getElementById('fourth');
-    firstElement.innerHTML = `4. ${team1} - ${A}pts`;
-
+    return `4. ${team1} - ${A}pts`;
 }else if( B <= A && B <= C && B <= D){
-    console.log (`4. ${team2} - ${B}pts`);
-    const firstElement = document.getElementById('fourth');
-    firstElement.innerHTML = `4. ${team1} - ${B}pts`;
-
+    return `4. ${team2} - ${B}pts`;
 }else if( C <= B && C <= A && C <= D){
-    console.log (`4. ${team3} - ${C}pts`);
-    const firstElement = document.getElementById('fourth');
-    firstElement.innerHTML = `4. ${team1} - ${C}pts`;
-
+    return `4. ${team3} - ${C}pts`;
 }else if(D <= B && D <= C && D <= A){
-    console.log (`4. ${team4} - ${D}pts`);
-    const firstElement = document.getElementById('fourth');
-    firstElement.innerHTML = `4. ${team1} - ${D}pts`;
+    return `4. ${team4} - ${D}pts`;
+}
 }
 
 
 
+
+
+
+
+const firstaElement = document.getElementById('first');
+    firstaElement.innerHTML = firstA();
+
+    const firstbElement = document.getElementById('second');
+    firstbElement.innerHTML = secondA();
+
+    const firstcElement = document.getElementById('third');
+    firstcElement.innerHTML = thridA();
+
+    const firstdElement = document.getElementById('fourth');
+    firstdElement.innerHTML = fourthA();
+
+
 }
+
+
+
 
 function groupB(team1, team2, team3, team4){
 
 
-    console.log('GROUP A: TABLE')
+    console.log('GROUP B: TABLE')
    
+   
+   let firstB = () => {
    if(A >= B && A >= C && A >= D){
-       console.log (`1. ${team1} - ${A}pts`);
-   
-       const groupbElement = document.getElementById('firstB');
-       groupbElement.innerHTML = `1. ${team1} - ${A}pts`;
-    
+       return `1. ${team1} - ${A}pts`;
    }else if(B >= A && B >= C && B >= D){
-    const groupbElement = document.getElementById('firstB');
-    groupbElement.innerHTML = `1. ${team2} - ${B}pts`;
-       console.log (`1. ${team2} - ${B}pts`);
-   
+        return `1. ${team2} - ${B}pts`
    }else if(C >= B && C >= A && C >= D){
-    const groupbElement = document.getElementById('firstB');
-    groupbElement.innerHTML = `1. ${team3} - ${C}pts`;
-       console.log (`1. ${team3} - ${C}pts`);
-   
+       return `1. ${team3} - ${C}pts` 
    }else if(D >= B && D >= C && D >= A){
-       console.log (`1. ${team4} - ${D}pts`);
-       const groupbElement = document.getElementById('firstB');
-       groupbElement.innerHTML = `1. ${team4} - ${D}pts`;
+       return`1. ${team4} - ${D}pts`
+   }
+   
    }
    
    
-   
-   
    //SECOND PLACE
    //SECOND PLACE
+   
+   let secondB = () => {
    if(A>=B && A>=C && A<=D || A>=C && A>=D && A<=B || A>=B && A>=D && A<=C){
-    const groupbElement = document.getElementById('secondB');
-    groupbElement.innerHTML = `2. ${team1} - ${A}pts`;
-       console.log (`2. ${team1} - ${A}pts`);
-   
+       return `2. ${team1} - ${A}pts`
    }else if(B>=A && B>=C && B<=D || B>=C && B>=D && B<=A || B>=A && B>=D && B<=C){
-    const groupbElement = document.getElementById('secondB');
-    groupbElement.innerHTML  = `2. ${team2} - ${B}pts`;
-       console.log (`2. ${team2} - ${B}pts`);
-   
+       return`2. ${team2} - ${B}pts`;
    }else if(C>=B && C>=A && C<=D || C>=A && C>=D && C<=B || C>=B && C>=D && C<=A){
-    const groupbElement = document.getElementById('secondB');
-    groupbElement.innerHTML  = `2. ${team3} - ${C}pts`;
-       console.log (`2. ${team3} - ${C}pts`);
-   
+      return `2. ${team3} - ${C}pts`;
    }else if(D>=B && D>=C && D<=A || D>=C && D>=A && D<=B || D>=B && D>=A && D<=C){
-    const groupbElement = document.getElementById('secondB');
-    groupbElement.innerHTML  = `2. ${team4} - ${D}pts`;
-       console.log (`2. ${team4} - ${D}pts`);
+      return `2. ${team4} - ${D}pts`
+   }
    }
    
    
    
-   
-   //THIRD PLACE 
    //THIRD PLACE
-   
+   let thridB = () => {
    if(A<=B && A<=C && A>=D || A<=C && A<=D && A>=B || A<=B && A<=D && A>=C){
-    const groupbElement = document.getElementById('thirdB');
-    groupbElement.innerHTML  = `3.${team1} - ${A}pts`;
-       console.log (`3. ${team1} - ${A}pts`);
-   
+      return `3. ${team1} - ${A}pts`;
    }else if(B<=A && B<=C && B>=D || B<=C && B<=D && B>=A || B<=A && B<=D && B>=C){
-    const groupbElement = document.getElementById('thirdB');
-    groupbElement.innerHTML  = `3.${team2} - ${B}pts`;
-       console.log (`3. ${team2} - ${B}pts`);
-   
+       return `3. ${team2} - ${B}pts`;
    }else if(C<=B && C<=A && C>=D || C<=A && C<=D && C>=B || C<=B && C<=D && C>=A){
-       const groupbElement = document.getElementById('thirdB');
-       groupbElement.innerHTML  = `3.${team3} - ${C}pts`;
-       console.log (`3. ${team3} - ${C}pts`);
-   
+       return `3. ${team3} - ${C}pts`;
    }else if(D<=B && D<=C && D>=A || D<=C && D<=A && D>=B || D<=B && D<=A && D>=C){
-    const groupbElement = document.getElementById('thirdB');
-    groupbElement.innerHTML  = `3.${team3} - ${D}pts`;
-       console.log (`3. ${team4} - ${D}pts`);
+       return `3. ${team4} - ${D}pts`;
    }
+   }
+   
    
    
    //LAST PLACE
-   
+   let fourthB = () => {
    if(A <= B && A <= C && A <= D){
-       console.log (`4. ${team1} - ${A}pts`);
-       const groupbElement = document.getElementById('fourthB');
-    groupbElement.innerHTML  = `4. ${team1} - ${A}pts`;
-   
+       return `4. ${team1} - ${A}pts`;
    }else if( B <= A && B <= C && B <= D){
-       console.log (`4. ${team2} - ${B}pts`);
-       const groupbElement = document.getElementById('fourthB');
-    groupbElement.innerHTML  = `4. ${team1} - ${B}pts`;
-   
+       return `4. ${team2} - ${B}pts`;
    }else if( C <= B && C <= A && C <= D){
-       console.log (`4. ${team3} - ${C}pts`);
-       const groupbElement = document.getElementById('fourthB');
-    groupbElement.innerHTML  = `4. ${team1} - ${C}pts`;
-   
+       return `4. ${team3} - ${C}pts`;
    }else if(D <= B && D <= C && D <= A){
-       console.log (`4. ${team4} - ${D}pts`);
-       const groupbElement = document.getElementById('fourthB');
-       groupbElement.innerHTML  = `4. ${team1} - ${D}pts`;
+       return `4. ${team4} - ${D}pts`;
+   }
    }
    
+   const gpraElement = document.getElementById('firstB');
+   gpraElement.innerHTML = firstB();
+   
+       const grpbElement = document.getElementById('secondB');
+       grpbElement.innerHTML = secondB();
+   
+       const grbcElement = document.getElementById('thirdB');
+       grbcElement.innerHTML = thridB();
+   
+       const grbdElement = document.getElementById('fourthB');
+       grbdElement.innerHTML = fourthB();
    
    
    }
-
 
    function groupC(team1, team2, team3, team4){
 
 
-    console.log('GROUP A: TABLE')
+    console.log('GROUP B: TABLE')
    
+   
+   let firstC = () => {
    if(A >= B && A >= C && A >= D){
-       console.log (`1. ${team1} - ${A}pts`);
-   
-       const groupcElement = document.getElementById('firstC');
-       groupcElement.innerHTML = `1. ${team1} - ${A}pts`;
-    
+       return `1. ${team1} - ${A}pts`;
    }else if(B >= A && B >= C && B >= D){
-    const groupcElement = document.getElementById('firstC');
-       groupcElement.innerHTML = `1. ${team2} - ${B}pts`;
-       console.log (`1. ${team2} - ${B}pts`);
-   
+        return `1. ${team2} - ${B}pts`
    }else if(C >= B && C >= A && C >= D){
-    const groupcElement = document.getElementById('firstC');
-       groupcElement.innerHTML = `1. ${team3} - ${C}pts`;
-       console.log (`1. ${team3} - ${C}pts`);
-   
+       return `1. ${team3} - ${C}pts` 
    }else if(D >= B && D >= C && D >= A){
-       console.log (`1. ${team4} - ${D}pts`);
-       const groupcElement = document.getElementById('firstC');
-       groupcElement.innerHTML = `1. ${team4} - ${D}pts`;
+       return`1. ${team4} - ${D}pts`
+   }
+   
    }
    
    
-   
-   
    //SECOND PLACE
    //SECOND PLACE
+   
+   let secondC = () => {
    if(A>=B && A>=C && A<=D || A>=C && A>=D && A<=B || A>=B && A>=D && A<=C){
-    const groupcElement = document.getElementById('secondC');
-    groupcElement.innerHTML = `2. ${team1} - ${A}pts`;
-       console.log (`2. ${team1} - ${A}pts`);
-   
+       return `2. ${team1} - ${A}pts`
    }else if(B>=A && B>=C && B<=D || B>=C && B>=D && B<=A || B>=A && B>=D && B<=C){
-    const groupcElement = document.getElementById('secondC');
-    groupcElement.innerHTML  = `2. ${team2} - ${B}pts`;
-       console.log (`2. ${team2} - ${B}pts`);
-   
+       return`2. ${team2} - ${B}pts`;
    }else if(C>=B && C>=A && C<=D || C>=A && C>=D && C<=B || C>=B && C>=D && C<=A){
-    const groupcElement = document.getElementById('secondC');
-    groupcElement.innerHTML  = `2. ${team3} - ${C}pts`;
-       console.log (`2. ${team3} - ${C}pts`);
-   
+      return `2. ${team3} - ${C}pts`;
    }else if(D>=B && D>=C && D<=A || D>=C && D>=A && D<=B || D>=B && D>=A && D<=C){
-    const groupcElement = document.getElementById('secondC');
-    groupcElement.innerHTML  = `2. ${team4} - ${D}pts`;
-       console.log (`2. ${team4} - ${D}pts`);
+      return `2. ${team4} - ${D}pts`
+   }
    }
    
    
    
-   
-   //THIRD PLACE 
    //THIRD PLACE
-   
+   let thridC = () => {
    if(A<=B && A<=C && A>=D || A<=C && A<=D && A>=B || A<=B && A<=D && A>=C){
-    const groupcElement = document.getElementById('thirdC');
-    groupcElement.innerHTML  = `3.${team1} - ${A}pts`;
-       console.log (`3. ${team1} - ${A}pts`);
-   
+      return `3. ${team1} - ${A}pts`;
    }else if(B<=A && B<=C && B>=D || B<=C && B<=D && B>=A || B<=A && B<=D && B>=C){
-    const groupcElement = document.getElementById('thirdC');
-    groupcElement.innerHTML  = `3.${team2} - ${B}pts`;
-       console.log (`3. ${team2} - ${B}pts`);
-   
+       return `3. ${team2} - ${B}pts`;
    }else if(C<=B && C<=A && C>=D || C<=A && C<=D && C>=B || C<=B && C<=D && C>=A){
-    const groupcElement = document.getElementById('thirdC');
-    groupcElement.innerHTML  = `3.${team3} - ${C}pts`;
-       console.log (`3. ${team3} - ${C}pts`);
-   
+       return `3. ${team3} - ${C}pts`;
    }else if(D<=B && D<=C && D>=A || D<=C && D<=A && D>=B || D<=B && D<=A && D>=C){
-    const groupcElement = document.getElementById('thirdC');
-    groupcElement.innerHTML  = `3.${team3} - ${D}pts`;
-       console.log (`3. ${team4} - ${D}pts`);
+       return `3. ${team4} - ${D}pts`;
    }
+   }
+   
    
    
    //LAST PLACE
-   
+   let fourthC = () => {
    if(A <= B && A <= C && A <= D){
-       console.log (`4. ${team1} - ${A}pts`);
-       const groupcElement = document.getElementById('fourthC');
-    groupcElement.innerHTML  = `4. ${team1} - ${A}pts`;
-   
+       return `4. ${team1} - ${A}pts`;
    }else if( B <= A && B <= C && B <= D){
-       console.log (`4. ${team2} - ${B}pts`);
-       const groupcElement = document.getElementById('fourthC');
-       groupcElement.innerHTML   = `4. ${team1} - ${B}pts`;
-   
+       return `4. ${team2} - ${B}pts`;
    }else if( C <= B && C <= A && C <= D){
-       console.log (`4. ${team3} - ${C}pts`);
-       const groupcElement = document.getElementById('fourthC');
-       groupcElement.innerHTML   = `4. ${team1} - ${C}pts`;
-   
+       return `4. ${team3} - ${C}pts`;
    }else if(D <= B && D <= C && D <= A){
-       console.log (`4. ${team4} - ${D}pts`);
-       const groupcElement = document.getElementById('fourthC');
-       groupcElement.innerHTML  = `4. ${team1} - ${D}pts`;
+       return `4. ${team4} - ${D}pts`;
+   }
    }
    
+   const firstcElement = document.getElementById('firstC');
+   firstcElement.innerHTML = firstC();
+   
+       const secondcElement = document.getElementById('secondC');
+       secondcElement.innerHTML = secondC();
+   
+       const thirdcElement = document.getElementById('thirdC');
+       thirdcElement.innerHTML = thridC();
+   
+       const fourthdElement = document.getElementById('fourthC');
+       fourthdElement.innerHTML = fourthC();
    
    
    }
 
-   function groupD(team1, team2, team3, team4){
-
-
-    console.log('GROUP A: TABLE')
    
+function groupD(team1, team2, team3, team4){
+
+
+    console.log('GROUP B: TABLE')
+   
+   
+   let firstD = () => {
    if(A >= B && A >= C && A >= D){
-       console.log (`1. ${team1} - ${A}pts`);
-   
-       const groupdElement = document.getElementById('firstD');
-       groupdElement.innerHTML = `1. ${team1} - ${A}pts`;
-    
+       return `1. ${team1} - ${A}pts`;
    }else if(B >= A && B >= C && B >= D){
-    const groupdElement = document.getElementById('firstD');
-    groupdElement.innerHTML = `1. ${team2} - ${B}pts`;
-       console.log (`1. ${team2} - ${B}pts`);
-   
+        return `1. ${team2} - ${B}pts`
    }else if(C >= B && C >= A && C >= D){
-    const groupdElement = document.getElementById('firstD');
-       groupdElement.innerHTML = `1. ${team3} - ${C}pts`;
-       console.log (`1. ${team3} - ${C}pts`);
-   
+       return `1. ${team3} - ${C}pts` 
    }else if(D >= B && D >= C && D >= A){
-       console.log (`1. ${team4} - ${D}pts`);
-       const groupdElement = document.getElementById('firstD');
-       groupdElement.innerHTML = `1. ${team4} - ${D}pts`;
+       return`1. ${team4} - ${D}pts`
+   }
+   
    }
    
    
-   
-   
    //SECOND PLACE
    //SECOND PLACE
+   
+   let secondD = () => {
    if(A>=B && A>=C && A<=D || A>=C && A>=D && A<=B || A>=B && A>=D && A<=C){
-    const groupdElement = document.getElementById('secondD');
-       groupdElement.innerHTML = `2. ${team1} - ${A}pts`;
-       console.log (`2. ${team1} - ${A}pts`);
-   
+       return `2. ${team1} - ${A}pts`
    }else if(B>=A && B>=C && B<=D || B>=C && B>=D && B<=A || B>=A && B>=D && B<=C){
-    const groupdElement = document.getElementById('secondD');
-    groupdElement.innerHTML = `2. ${team2} - ${B}pts`;
-       console.log (`2. ${team2} - ${B}pts`);
-   
+       return`2. ${team2} - ${B}pts`;
    }else if(C>=B && C>=A && C<=D || C>=A && C>=D && C<=B || C>=B && C>=D && C<=A){
-    const groupdElement = document.getElementById('secondD');
-       groupdElement.innerHTML  = `2. ${team3} - ${C}pts`;
-       console.log (`2. ${team3} - ${C}pts`);
-   
+      return `2. ${team3} - ${C}pts`;
    }else if(D>=B && D>=C && D<=A || D>=C && D>=A && D<=B || D>=B && D>=A && D<=C){
-    const groupdElement = document.getElementById('secondD');
-       groupdElement.innerHTML  = `2. ${team4} - ${D}pts`;
-       console.log (`2. ${team4} - ${D}pts`);
+      return `2. ${team4} - ${D}pts`
+   }
    }
    
    
    
-   
-   //THIRD PLACE 
    //THIRD PLACE
-   
+   let thridD = () => {
    if(A<=B && A<=C && A>=D || A<=C && A<=D && A>=B || A<=B && A<=D && A>=C){
-    const groupdElement = document.getElementById('thirdD');
-       groupdElement.innerHTML  = `3.${team1} - ${A}pts`;
-       console.log (`3. ${team1} - ${A}pts`);
-   
+      return `3. ${team1} - ${A}pts`;
    }else if(B<=A && B<=C && B>=D || B<=C && B<=D && B>=A || B<=A && B<=D && B>=C){
-    const groupdElement = document.getElementById('thirdD');
-       groupdElement.innerHTML  = `3.${team2} - ${B}pts`;
-       console.log (`3. ${team2} - ${B}pts`);
-   
+       return `3. ${team2} - ${B}pts`;
    }else if(C<=B && C<=A && C>=D || C<=A && C<=D && C>=B || C<=B && C<=D && C>=A){
-    const groupdElement = document.getElementById('thirdD');
-       groupdElement.innerHTML  = `3.${team3} - ${C}pts`;
-       console.log (`3. ${team3} - ${C}pts`);
-   
+       return `3. ${team3} - ${C}pts`;
    }else if(D<=B && D<=C && D>=A || D<=C && D<=A && D>=B || D<=B && D<=A && D>=C){
-    const groupdElement = document.getElementById('thirdD');
-       groupdElement.innerHTML  = `3.${team3} - ${D}pts`;
-       console.log (`3. ${team4} - ${D}pts`);
+       return `3. ${team4} - ${D}pts`;
    }
+   }
+   
    
    
    //LAST PLACE
-   
+   let fourthD = () => {
    if(A <= B && A <= C && A <= D){
-       console.log (`4. ${team1} - ${A}pts`);
-       const groupdElement = document.getElementById('fourthD');
-       groupdElement.innerHTML  = `4. ${team1} - ${A}pts`;
-   
+       return `4. ${team1} - ${A}pts`;
    }else if( B <= A && B <= C && B <= D){
-       console.log (`4. ${team2} - ${B}pts`);
-       const groupdElement = document.getElementById('fourthD');
-       groupdElement.innerHTML    = `4. ${team1} - ${B}pts`;
-   
+       return `4. ${team2} - ${B}pts`;
    }else if( C <= B && C <= A && C <= D){
-       console.log (`4. ${team3} - ${C}pts`);
-       const groupdElement = document.getElementById('fourthD');
-       groupdElement.innerHTML   = `4. ${team1} - ${C}pts`;
-   
+       return `4. ${team3} - ${C}pts`;
    }else if(D <= B && D <= C && D <= A){
-       console.log (`4. ${team4} - ${D}pts`);
-       const groupdElement = document.getElementById('fourthD');
-       groupdElement.innerHTML   = `4. ${team1} - ${D}pts`;
+       return `4. ${team4} - ${D}pts`;
+   }
    }
    
+   const firstdElement = document.getElementById('firstD');
+   firstdElement.innerHTML = firstD();
+   
+       const seconddElement = document.getElementById('secondD');
+       seconddElement.innerHTML = secondD();
+   
+       const thirddElement = document.getElementById('thirdD');
+       thirddElement.innerHTML = thridD();
+   
+       const fourthdElement = document.getElementById('fourthD');
+       fourthdElement.innerHTML = fourthD();
    
    
    }
-
-
-
-
-
-//1.${team1} has qualified to the next group with ${A} Points
-//2.${team1} Has quilified at Second place with ${A} Points
-//3.${team1} goes to Europa with ${A} Points
-//4.${team1} has been disqualified with ${A} Points

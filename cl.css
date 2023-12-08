@@ -36,6 +36,8 @@ div {
     font-weight: 100;
     background-color: rgba(15, 15, 38, 0.515);
     border-radius: 10px;
+    text-align: left;
+    display: flex;
 }
 
 
@@ -88,10 +90,21 @@ h3{
 }
 
 
-#boxA,#boxB,
-#boxC,#boxD{
-    max-width: 900px;
+
+
+
+#gameAC1:hover,#gameAC11:hover, 
+#gameAC2:hover, #gameAC22:hover,
+#gameBD1:hover, #gameBD11:hover,
+#gameBD2:hover, #gameBD22:hover{
+    background-color: rgb(167, 152, 238);   
 }
+
+
+
+
+
+
 
 
 
