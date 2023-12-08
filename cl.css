@@ -1,17 +1,17 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(../Clock/images/unirie1.jpg);
+    background-image: url(Clock/mages/unirise.jpg);
     background-size: 150%;
     background-position: center;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(216, 243, 255);
     font-family: 'Arial', sans-serif;
     
 }
 
 div {
     max-width: 340px;
-    max-height: 400px;
+    height: auto;
     margin: 20px auto;
     margin-left: 15px;
     padding: 8px;
@@ -20,34 +20,6 @@ div {
     display:inline-block;
      
 }
-
-
-
-#first,#second,#third,#fourth,
-#firstB,#secondB,#thirdB,#fourthB,
-#firstC,#secondC,#thirdC,#fourthC,
-#firstD,#secondD,#thirdD,#fourthD{
-    font-size: 1.1rem;
-    width: 300px;
-    height: 30px;
-    text-align: left;
-    margin: 12px;
-    color: white;
-    font-weight: 100;
-    background-color: rgba(15, 15, 38, 0.515);
-    border-radius: 10px;
-    text-align: left;
-    display: flex;
-}
-
-
-#first:hover,#second:hover,#third:hover,#fourth:hover,
-#firstB:hover,#secondB:hover,#thirdB:hover, #fourthB:hover,
-#firstC:hover,#secondC:hover,#thirdC:hover,#fourthC:hover,
-#firstD:hover, #secondD:hover, #thirdD:hover,#fourthD:hover{
-    background-color: rgb(167, 152, 238);
-}
-
 
 h1 {
     height: 50px;
@@ -73,17 +45,99 @@ h3{
 }
 
 
+#first, #second, #third, #fourth{
+    font-size: 1.1rem;
+    width: 220px; /* Change width if needed */
+    height: 30px;
+    text-align: left; /* Change text-align if needed */
+    margin: 12px;
+    color: white;
+    font-weight: 100;
+    background-color: rgba(15, 15, 38, 0.515);
+    border-radius: 10px;
+    
 
-#gameAC1,#gameAC11, 
-#gameAC2, #gameAC22,
-#gameBD1, #gameBD11,
-#gameBD2, #gameBD22 {
+   
+  }
+  
+  #ptsA1, #ptsA2, #ptsA3, #ptsA4{
+    font-size: 1.2rem;
+    text-align: right; /* Change text-align if needed */
+
+    color: white;
+   
+
+
+  }
+  
+  
+
+
+
+#firstB,#secondB,#thirdB,#fourthB,
+#firstC,#secondC,#thirdC,#fourthC,
+#firstD,#secondD,#thirdD,#fourthD{
+    font-size: 1.1rem;
+    width: 220px;
+    height: 30px;
+    text-align: left;
+    margin: 12px;
+    color: white;
+    font-weight: 100;
+    background-color: rgba(15, 15, 38, 0.515);
+    border-radius: 10px;
+    text-align: left;
+
+}
+
+
+#first:hover,#second:hover,#third:hover,#fourth:hover,
+#firstB:hover,#secondB:hover,#thirdB:hover, #fourthB:hover,
+#firstC:hover,#secondC:hover,#thirdC:hover,#fourthC:hover,
+#firstD:hover, #secondD:hover, #thirdD:hover,#fourthD:hover{
+    background-color: rgb(167, 152, 238);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#gameAC1,
+#gameAC2, 
+#gameBD1, 
+#gameBD2 {
     font-size: 1.1rem;
     width: 300px;
     height: 30px;
     text-align: left;
     margin: 12px;
-    color: black;
+    color: rgb(241, 240, 240);
+    font-weight: 100;
+    background-color: rgba(15, 15, 38, 0.515);
+    border-radius: 10px;
+}
+
+
+#gameAC11, 
+#gameAC22,
+#gameBD11,
+#gameBD22 {
+    text-align: right;
+    font-size: 1.1rem;
+    width: 300px;
+    height: 30px;
+    margin: 12px;
+    color: rgb(241, 240, 240);
     font-weight: 100;
     background-color: rgba(15, 15, 38, 0.515);
     border-radius: 10px;
@@ -92,12 +146,11 @@ h3{
 
 
 
-
 #gameAC1:hover,#gameAC11:hover, 
 #gameAC2:hover, #gameAC22:hover,
 #gameBD1:hover, #gameBD11:hover,
 #gameBD2:hover, #gameBD22:hover{
-    background-color: rgb(167, 152, 238);   
+        background-color: rgb(167, 152, 238);   
 }
 
 
@@ -105,6 +158,12 @@ h3{
 
 
 
+
+
+#boxA,#boxB,
+#boxC,#boxD{
+    max-width: 10000px;
+}
 
 
 
