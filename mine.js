@@ -9,12 +9,12 @@ let D = Math.floor(Math.random() * 10)
 
 
 
-groupA('Liverpool', 'Barcelona', 'Arsenal', 'Man City');
+groupA(['Liverpool', 'Barcelona', 'Arsenal', 'Man City']);
 groupB('Psg', 'Sevilla', 'Man Utd', 'Fulham')
 groupC('Ajax','Napoli','Bayern Munich','Lyon',)
 groupD('Aston Villa','Chealsea','New Castle','Galatasaray',)
 
-function groupA(team1, team2, team3, team4){
+function groupA([team1, team2, team3, team4]){
 
     const A = Math.floor(Math.random() * 10) 
     const B = Math.floor(Math.random() * 10)
@@ -35,6 +35,11 @@ function groupA(team1, team2, team3, team4){
     
     }
     
+    if (firstA === groupA[0]){
+        return groupA[0]
+    }else if(){
+        
+    }
     
     //SECOND PLACE
     //SECOND PLACE
@@ -112,21 +117,22 @@ const firstaElement = document.getElementById('first');
 
 //QUATER FINALS
 
-const quatergame1Element = document.getElementById('gameAC1');
+var quatergame1Element = document.getElementById('gameAC1');
 quatergame1Element.innerHTML = firstA();
 
 const quatergame2Element = document.getElementById('gameAC2');
 quatergame2Element.innerHTML = secondA() ;
 
 
-const pointa2Element = document.getElementById('ptsA2');
-pointa2Element.innerHTML = '-- '+B + 'pts';
-const pointa3Element = document.getElementById('ptsA3');
-pointa3Element.innerHTML = '-- '+C + 'pts';
-const pointa4Element = document.getElementById('ptsA4');
-pointa4Element.innerHTML = '-- '+D + 'pts';
     
+function home1(){
+    let hom = Math.floor(Math.random() * 5)
+    let awy = Math.floor(Math.random() * 5)
 
+    if(hom > awy){
+
+    }
+}
 }
 
 
@@ -434,4 +440,5 @@ pointa4Element.innerHTML = '-- '+D + 'pts';
    }
 
    
+
 
