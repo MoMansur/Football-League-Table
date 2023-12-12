@@ -35,11 +35,7 @@ function groupA([team1, team2, team3, team4]){
     
     }
     
-    if (firstA === groupA[0]){
-        return groupA[0]
-    }else if(){
-        
-    }
+   
     
     //SECOND PLACE
     //SECOND PLACE
@@ -124,16 +120,19 @@ const quatergame2Element = document.getElementById('gameAC2');
 quatergame2Element.innerHTML = secondA() ;
 
 
-    
-function home1(){
+console.log(firstA())
+    console.log(secondA())
+    console.log(thridA())
+    console.log(fourthA())    
+
     let hom = Math.floor(Math.random() * 5)
     let awy = Math.floor(Math.random() * 5)
 
-    if(hom > awy){
+   
 
-    }
+
 }
-}
+
 
 
 

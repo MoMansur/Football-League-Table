@@ -1,14 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(./bck.jpg);
-    background-size: 150%;
-    background-position: center;
+   
     background-size: contain;
+    background-position: center;
     background-color: rgb(216, 243, 255);
     font-family: 'Arial', sans-serif;
-    
 }
+
 
 div {
     max-width: 340px;
