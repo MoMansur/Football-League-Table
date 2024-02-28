@@ -1,5 +1,5 @@
 
-//football group stage
+//ootball group stage
 
 
 let A = Math.floor(Math.random() * 10) 
@@ -439,5 +439,3 @@ pointa4Element.innerHTML = '-- '+D + 'pts';
    }
 
    
-
-

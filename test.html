@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cl.css">
+    <title>Champions League group</title>
+</head>
+<style>body {
+    margin: 0;
+    padding: 0;
+   
+    background-size: contain;
+    background-position: center;
+    background-color: rgb(216, 243, 255);
+    font-family: 'Arial', sans-serif;
+}
+
+
+div {
+    max-width: 340px;
+    height: auto;
+    margin: 20px auto;
+    margin-left: 15px;
+    padding: 8px;
+    background-color: rgba(4, 0, 88, 0.963);
+    border-radius: 20px;
+    display:inline-block;
+     
+}
+
+h1 {
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+    max-width: auto;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    background-color: rgb(0, 0, 134);
+    
+}
+H2{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+h3{
+    text-align: center;
+    font-size: 20px;
+    color: blue;
+}
+
+
+#first, #second, #third, #fourth{
+    font-size: 1.1rem;
+    width: 220px; /* Change width if needed */
+    height: 30px;
+    text-align: left; /* Change text-align if needed */
+    margin: 12px;
+    color: white;
+    font-weight: 100;
+    background-color: rgba(15, 15, 38, 0.515);
+    border-radius: 10px;
+    
+
+   
+  }
+  
+  #ptsA1, #ptsA2, #ptsA3, #ptsA4{
+    font-size: 1.2rem;
+    text-align: right; /* Change text-align if needed */
+
+    color: white;
+   
+
+
+  }
+  
+  
+
+
+
+#firstB,#secondB,#thirdB,#fourthB,
+#firstC,#secondC,#thirdC,#fourthC,
+#firstD,#secondD,#thirdD,#fourthD{
+    font-size: 1.1rem;
+    width: 220px;
+    height: 30px;
+    text-align: left;
+    margin: 12px;
+    color: white;
+    font-weight: 100;
+    background-color: rgba(15, 15, 38, 0.515);
+    border-radius: 10px;
+    text-align: left;
+
+}
+
+
+#first:hover,#second:hover,#third:hover,#fourth:hover,
+#firstB:hover,#secondB:hover,#thirdB:hover, #fourthB:hover,
+#firstC:hover,#secondC:hover,#thirdC:hover,#fourthC:hover,
+#firstD:hover, #secondD:hover, #thirdD:hover,#fourthD:hover{
+    background-color: rgb(167, 152, 238);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#gameAC1,
+#gameAC2, 
+#gameBD1, 
+#gameBD2 {
+    font-size: 1.1rem;
+    width: 300px;
+    height: 30px;
+    text-align: left;
+    margin: 12px;
+    color: rgb(241, 240, 240);
+    font-weight: 100;
+    background-color: rgba(15, 15, 38, 0.515);
+    border-radius: 10px;
+}
+
+
+#gameAC11, 
+#gameAC22,
+#gameBD11,
+#gameBD22 {
+    text-align: right;
+    font-size: 1.1rem;
+    width: 300px;
+    height: 30px;
+    margin: 12px;
+    color: rgb(241, 240, 240);
+    font-weight: 100;
+    background-color: rgba(15, 15, 38, 0.515);
+    border-radius: 10px;
+}
+
+
+
+
+#gameAC1:hover,#gameAC11:hover, 
+#gameAC2:hover, #gameAC22:hover,
+#gameBD1:hover, #gameBD11:hover,
+#gameBD2:hover, #gameBD22:hover{
+        background-color: rgb(167, 152, 238);   
+}
+
+
+
+
+
+
+
+
+#boxA,#boxB,
+#boxC,#boxD{
+    max-width: 10000px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#semi1, #semi11,
+#semi2, #semi22{
+    font-size: 1.1rem;
+    width: 300px;
+    height: 30px;
+    text-align: left;
+    margin: 12px;
+    color: black;
+    font-weight: 100;
+    background-color: rgba(15, 15, 38, 0.515);
+    border-radius: 10px;
+}
+#box2,#box3{
+    max-width: 900px;
+}
+
+#finals{
+    max-width: max-content;
+   
+    margin-right: 20px;
+}
+
+#final1, #final2{
+    font-size: 1.1rem;
+    height: 30px;
+    width: 300px;
+    text-align: left;
+    margin: 12px;
+    color: black;
+    font-weight: 100;
+    background-color: rgba(15, 15, 38, 0.515);
+    border-radius: 10px;
+}
+
+
+</style>
+<body> 
+    
+    <h1>Champions League Table</h1>
+
+
+    
+    <h3>Group Stage</h3>
+
+<div>
+    <h2>Group A</h2>
+    <div id="first"></div><span id="ptsA1"></span>
+    <div id="second"></div><span id="ptsA2"></span>
+    <div id="third"></div><span id="ptsA3"></span>
+    <div id="fourth"></div><span id="ptsA4"></span>
+
+</div>
+
+<div id="grpB">
+    <h2>Group B</h2>
+    <div id="firstB"></div><span id="ptsB1"></span>
+    <div id="secondB"></div><span id="ptsB2"></span>
+    <div id="thirdB"></div><span id="ptsB3"></span>
+    <div id="fourthB"></div><span id="ptsB4"></span>
+</div>
+
+<div>
+    <h2>Group C</h2>
+    <div id="firstC"></div><span id="ptsC1"></span>
+    <div id="secondC"></div><span id="ptsC2"></span>
+    <div id="thirdC"></div><span id="ptsC3"></span>
+    <div id="fourthC"></div><span id="ptsC4"></span>
+</div>
+
+<div>
+    <h2>Group D</h2>
+    <div id="firstD"></div><span id="ptsD1"></span>
+    <div id="secondD"></div><span id="ptsD2"></span>
+    <div id="thirdD"></div><span id="ptsD3"></span>
+    <div id="fourthD"></div><span id="ptsD4"></span>
+</div>
+
+    <h3>Quater Finals</h3>
+    <div id="boxA">
+        <h2>Game 1</h2>
+        <div id="gameAC1"></div>
+        <div id="gameAC11"></div>
+    </div>
+    <div id="boxB">
+        <h2>Game 2</h2>
+        <div id="gameAC2"></div>
+        <div id="gameAC22"></div>
+    </div>
+    <div id="boxC">
+        <h2>Game 3</h2>
+        <div id="gameBD1"></div>
+        <div id="gameBD11"></div>
+    </div>
+    <div id="boxD">
+        <h2>Game 4</h2>
+        <div id="gameBD2"></div>
+        <div id="gameBD22"></div>
+    </div>
+
+ <h3>Semi Finals</h3>
+ <div id="box2">
+
+    <h2>Game 1</h2>
+    <div id="semi1"></div>
+    <div id="semi11"></div>
+ </div>
+
+ <div id="box3">
+    <h2>Game 2</h2>
+    <div id="semi2"></div>
+    <div id="semi22"></div>
+ </div>
+
+        <h3>Finals</h3>
+<div id="finals">
+    <h2>Game 1</h2>
+    <div id="final1"></div>
+    <div id="final2"></div>
+</div>
+
+
+    <script src="./mine.js"></script>
+</body>
+</html>
