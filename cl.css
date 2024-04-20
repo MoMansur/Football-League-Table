@@ -78,7 +78,7 @@ button{
     margin: 2px;
 }
 
-ul{
+ol{
     background-color: rgba(0, 21, 255, 0.515);
     font-size: 1.1rem;
     width: 280px; /* Adjust width if needed */
@@ -104,7 +104,7 @@ ul{
   }
 
 
-ul:hover,li:hover{
+ol:hover,li:hover{
     background-color: rgba(106, 202, 247, 0.208);
 }
 
