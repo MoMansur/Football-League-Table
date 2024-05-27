@@ -87,11 +87,11 @@ export function DOMCreator(team1, team2, team3, team4, index){
     teamsList.append(tableFunctionDiv)
       
          
-   function insert(){
-    firstPlaceTeam.innerText = team1
-    secondPlaceTeam.innerText = team2
-    thirdPlaceTeam.innerText = team3
-    fourthPlaceTeam.innerText = team4
+   function insert(pts1, pts2, pts3, pts4){
+    firstPlaceTeam.innerText = pts1
+    secondPlaceTeam.innerText = pts2
+    thirdPlaceTeam.innerText = pts3
+    fourthPlaceTeam.innerText = pts4
    }
    insert()
 
@@ -105,7 +105,7 @@ export function DOMCreator(team1, team2, team3, team4, index){
   })
   
    
-  
+  return {insert}
 
   }
   

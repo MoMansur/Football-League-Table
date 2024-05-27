@@ -1,130 +1,73 @@
-//TEAM ARRAY
-var teamA = ['Aston Villa', 'Liverpool', 'Galatasaray', 'Napoli'];
-var teamB =['Psg', 'Sevilla', 'Man Utd', 'Fulham']
-var teamC = ['Ajax', 'Man-City', 'Bayern Munich', 'Lyon']
-var teamD = ['Chealsea','Barcelona','New Castle','Benfica',]
-
-//HTML CONNECT
-var listA = document.getElementById("GroupA");
-var listB = document.getElementById("GroupB");
-var listC = document.getElementById("GroupC");
-var listD = document.getElementById("GroupD");
-
-//HTML CONNECT QUATER FINALS
-var quaterFinalA1 = document.getElementById('gameA1');
-var quaterFinalC2 = document.getElementById('gameAC11');
-
-var quaterFinalA2 = document.getElementById('gameAC2');
-var quaterFinalD1 = document.getElementById('gameAC22');
-
-var quaterFinalB1 = document.getElementById('gameBD1');
-var quaterFinalD2 = document.getElementById('gameBD11');
-
-var quaterFinalB2 = document.getElementById('gameBD2');
-var quaterFinalC1 = document.getElementById('gameBD22');
+import { DOMCreator } from "./dom.js";
 
 
+let TeamsArr = loadLibraryFromStorage();
 
-
-
-//POINTS
-var pts = [0,1,2,3,4,5,6,7,8,9,10]
-var put= []
-  while(pts.length > 0){
-  let random = Math.floor(Math.random() * pts.length)
-  let sort = pts.splice(random, 1) [0];
-  put.push(sort);
-}
-for(let i = 0; i < pts.length; i++){
-  console.log(pts[i])
-}
-let ptsA= [put[0], put[1], put[2], put[3]]
-let ptsB= [put[1], put[6], put[5], put[4]]
-let ptsC= [put[3], put[2], put[9], put[7]]
-let ptsD= [put[8], put[3], put[7], put[4]]
-
-
-var finalSorted = [];
-function sortPts(array){
-  array.sort((a, b) => b-a)  
-}
-sortPts(ptsA)
-sortPts(ptsB)
-sortPts(ptsC)
-sortPts(ptsD)
-
-
-//GROUP STAGE TEAM DRAWS
-
-function draws(team, points, connect,){
-  var draw = [];
-  while (team.length > 0) {
-    var randomIndex = Math.floor(Math.random() * team.length);
-    var removedElement = team.splice(randomIndex, 1)[0];
-    draw.push(removedElement);
-  }
-  
-  var listContent = "";
-  for (let i = 0; i < draw.length; i++) {
-      listContent += "<ul>" + draw[i] + "<li>" + points[i] +"</li>" +"</ul>";
+class GroupStage {
+    constructor(team1, team2, team3, team4) {
+        this.team = [team1, team2, team3, team4]
+        this.points = [this.point(), this.point(), this.point(), this.point()];
     }
-
-   
-   connect.innerHTML = listContent;
-   
-   //QUATER FINALS FUNCTION
-
-function quater(qf1, qf2){
-  var quater1 = "";
-  var quater2 ="";
-  for(let j=0; j< 1; j++){
-   quater1 += draw[i]
- }
- for(let k=1; k< 2; k++){
-   quater2 += draw[i]
+    point() {
+        return Math.floor(Math.random() * 10) + 1;
+    }
+    teamPoint(){
+       for(let i=0; i<this.team; i++){
+       return [this.team[i], this.points[i]]
+       }
+    }
 }
-qf1.innerHTML = quater1;
- qf2.innerHTML = quater2;
-}
-  
 
+// Add a new book to the library array and save to localStorage
+function addNewTeam(team1, team2, team3, team) {
+    const newTeam = new GroupStage(team1, team2, team3, team);
+    console.log(newTeam.teamPoint())
+    TeamsArr.push(newTeam);
+   
 
  
-
-
-
 }
-draws(teamA, ptsA, listA)
-draws(teamB, ptsB, listB)
-draws(teamC, ptsC, listC)
-draws(teamD, ptsD, listD)
+saveLibraryToStorage()
 
+// Save library to localStorage
+function saveLibraryToStorage() {
+    localStorage.setItem('TeamsArr', JSON.stringify(TeamsArr));
+}
 
+// Load library from localStorage
+function loadLibraryFromStorage() {
+    const team = localStorage.getItem('TeamsArr');
+    if(team){
+       return JSON.parse(team)
+    } else{
+        return []
+    } 
+}
 
-//QUATER FINALS TEAM DRAWS
-
-
-
-
-
-
+// Display all books in the library
+export function displayer(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        DOMCreator(arr[i].team[0], arr[i].team[1], arr[i].team[2], arr[i].team[3], i);
+        
+        
+        const dom = DOMCreator().insert(arr[i].points[0], arr[i].points[1], arr[i].points[2], arr[i].points[3], i)
+        console.log(arr[i].points)
+    }
+    console.log(TeamsArr)
    
-   
-
-    
- 
-
-  
-    var quatergame = "";
-  for(let j=0; j< 1; j++){
-    quatergame += draw[j]
-    
-  }
-  const quaterFinal1 = document.getElementById('gameAC1');
-    quaterFinal1.innerHTML = quatergame;
+}
 
 
 
 
-  // Update the content of the "team-list" element
- 
+addNewTeam('Liverpool', 'Barcelona', 'Arsenal', 'Man City')
+addNewTeam('Psg', 'Sevilla', 'Man Utd', 'Fulham')
+addNewTeam('Ajax','Napoli','Bayern Munich','Lyon')
+addNewTeam('Aston Villa','Chealsea','New Castle','Galatasaray')
+
+// Display the initial set of books
+displayer(TeamsArr);
+
+
+
+
