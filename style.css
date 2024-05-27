@@ -9,219 +9,52 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-div {
-    max-width: auto;
-    height: auto;
-    margin: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 10px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 20px;
-    display:inline-block;
-    color: white;
-}
-
-h1 {
-    height: 50px;
-    color: rgb(1, 10, 255);
-    border-radius: 10px;
-    max-width: auto;
-    font-size: 30px;
-    margin-left: 0px;
-    margin-right: 0px;
-    text-align: center;
-    line-height: 50px;
-    padding: 10px;
-    background-color: #00ffff;
-}
-
-h3{
-    text-align: center;
-    font-size: 20px;
-    color: blue;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   
-}
-
-h2{
-    color: rgb(0, 38, 255);
-    text-align: center;
-    font-size: 20px;
-}
-
-#settings{
-
-   max-width: 100%;
-    height: 150px;
-    margin: 10px;
-    margin-left: 15px;
-    padding: 10px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 20px;
-    display:flex;
-    color: rgb(4, 20, 249);
-    
-}
-button{
-    color: black;
-    background-color: rgb(0, 34, 255);
-    border-radius: 50px;
-    height: 40px;
-}
-
-
-#GroupA,#GroupB,
-#GroupC,#GroupD{
-    margin-left: 2px;
-    background-color: rgba(2, 29, 36, 0.53);
-    margin: 2px;
-}
-
-ul{
-    background-color: rgba(0, 21, 255, 0.515);
-    font-size: 1.1rem;
-    width: 280px; /* Adjust width if needed */
-    height: 40px;
-    line-height: 40px;
-    border-radius: 10px;
-    padding: 15px;
+#groupStageContainer{
     display: flex;
-
-  }
-  
-  li {
-    background-color: rgba(0, 85, 255, 0.777);
-    font-size: 1.1rem;
-    width: 50px; /* Adjust width if needed */
-    height: 40px;
-    text-align: center;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: 0px;
-    display: inline-block;
-    line-height: 40px;
-  }
-
-
-ul:hover,li:hover{
-    background-color: rgba(106, 202, 247, 0.208);
+    flex-wrap: wrap;
 }
 
-
-/*QAUTER FINALS*/ 
-
-#gameA1,
-#gameA2, 
-#gameB1, 
-#gameB2{
-    font-size: 1.1rem;
-    width: 280px;
-    height: 30px;
-    margin: 5px;
-    color: white;
-    font-weight: 100;
-    background-color: rgba(15, 15, 38, 0.515);
-    border-radius: 10px;
-    display: inline-flex;
-}
-
-#gameC2,
-#gameD1, 
-#gameD2, 
-#gameC1{
-    font-size: 1.1rem;
-    width: 280px;
-    height: 30px;
-    margin: 5px;
-    color: white;
-    font-weight: 100;
-    background-color: rgba(15, 15, 38, 0.515);
-    border-radius: 10px;
-    display: inline-flex;
- 
-
- 
-} 
-
-#gameC2 li,
-#gameD1 li, 
-#gameD2 li, 
-#gameC1 li{
-    margin-left: 0px;
-    margin-right: auto;
-} 
-
-
-
-#gameC1:hover,#gameC1:hover, 
-#gameA2:hover, #gameC2:hover,
-#gameB1:hover, #gameD1:hover,
-#gameB2:hover, #gameBD22:hover{
-        background-color: rgb(24, 16, 61);   
-}
-
-
-
-
-
-
-
-
-#boxA,#boxB,
-#boxC,#boxD{
-   max-width: 900px;
-  
-}
-
-
-#boxA li,#boxB li,
-#boxC li,#boxD li{
-
-  
-}
-
-
-
-#semi1, #semi11,
-#semi2, #semi22{
-    font-size: 1.1rem;
-    max-width: 980px;
-    height: 30px;
-    text-align: left;
-    line-height: 40px;
-    margin: 5px;
-    color: rgb(0, 247, 255);
-    font-weight: 100;
-    background-color: rgba(15, 15, 38, 0.911);
-    border-radius: 10px;
-    display: inline-flex;
-}
-
-#semi11 li, #semi22 li{
-    margin-left: 1px;
-    margin-right: auto;
-}
-
-
-#box2,#box3{
-    max-width: max-content;
-}
-
-#finals{
-    max-width: max-content;
-   
-    margin-right: 20px;
-}
-
-#final1, #final2{
-    font-size: 1.1rem;
-    height: 30px;
+#groupCard{
+    background-color:white;
+    margin: 10px;
+    padding: 1rem;
+    border-radius: 10PX;
+    border: 1px solid black;
     width: 300px;
-    text-align: left;
-    margin: 12px;
-    color: black;
-    font-weight: 100;
-    background-color: rgba(15, 15, 38, 0.515);
-    border-radius: 10px;
+    height: auto;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.numberSpan{
+    background-color: aquamarine;
+    width: 100px;
+    margin: 5px;
+ 
+}
+
+.team{
+    margin: 10px;
+    background-color: lightblue;
+    padding: 0.5rem;
+}
+
+.pts{
+    width: 100px;
+    background-color: aqua;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+#tableFunctionDiv{
+
+    margin: 10px;
+}
+
+#playBtn{
+    line-height: 10px;
+    width: 50px;
+    height: 30px;
+    float: right;
 }
